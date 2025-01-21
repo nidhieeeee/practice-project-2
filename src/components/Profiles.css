@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.other-users .profile-card{
+    width: 250px; 
+    height: 322px;
+    margin-top: 10px;
+}
+.users-cards{
+    display: flex;
+    width: 70%;
+    height: 100%;
+}
+.other-users .profile-header{
+    padding: 5px;
+}
+.other-users .profile-avatar{
+width: 50px;
+height: 50px;
+margin-bottom: 0px;
+}
+.other-users .profile-name{
+    margin: 0px 0 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.other-users .profile-artistName{
+    font-size: 0.9rem;
+}
+.other-users .profile-info{
+    margin-bottom: 15px;
+    word-break: break-all;
+}
+.other-users .profile-body{
+    padding: 10px;
+}
+.other-users .profile-info h3{
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+.other-users .profile-info p{
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+.other-users .your-song p{
+margin-top: 5px;
+font-size: 0.8rem;
+}
+.other-users .profile-buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(249,249,249);
+}
