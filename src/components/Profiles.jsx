@@ -4,14 +4,14 @@ import "./Profiles.css";
 function Profiles(){
     return(
         <div className="other-users"> 
-        <div className="profile-card">
-                <div className="profile-header">
-                    <img src="https://thumbs.dreamstime.com/b/d-icon-avatar-cartoon-cute-freelancer-woman-working-online-learning-laptop-transparent-png-background-works-embodying-345422695.jpg" alt="Avatar" className="profile-avatar" />
-                    <h2 className="profile-name">Nidhi Mehta</h2>
-                    <p className="profile-artistName">Front-End Developer</p>
+        <div className="profiles-card">
+                <div className="profiles-header">
+                    <img src="https://thumbs.dreamstime.com/b/d-icon-avatar-cartoon-cute-freelancer-woman-working-online-learning-laptop-transparent-png-background-works-embodying-345422695.jpg" alt="Avatar" className="profiles-avatar" />
+                    <h2 className="profiles-name">Nidhi Mehta</h2>
+                    <p className="profiles-artistName">Front-End Developer</p>
                 </div>
-                <div className="profile-body">
-                    <div className="profile-info">
+                <div className="profiles-body">
+                    <div className="profiles-info">
                         <h3>Contact Information</h3>
                         <p> <Mail height="20px"  /> <span>nidhimehta0303@gmail.com</span></p>
                         

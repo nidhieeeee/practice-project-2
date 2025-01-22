@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-.profile-card{
+.profiles-card{
     width: 300px; 
     height: 330px;
     margin: 10px 0px;
@@ -16,34 +16,34 @@
     width: 70%;
     height: 100%;
 }
-.profile-header{
+.profiles-header{
     padding: 5px;
     background-color: #2c3e50;
     color: white;
     text-align: center;
 }
-.profile-avatar{
+.profiles-avatar{
 width: 100px;
 height: 100px;
 border-radius: 50%;
 border: 3px solid rgb(255,255,255);
 }
-.profile-name{
+.profiles-name{
     margin: 0px 0 5px;
     font-size: 1.1rem;
     font-weight: bold;
 }
-.profile-artistName{
+.profiles-artistName{
     font-size: 0.9rem;
 }
-.profile-info{
+.profiles-info{
     margin-bottom: 10px;
     word-break: break-all;
 }
-.profile-body{
+.profiles-body{
     padding: 10px;
 }
-.profile-info h3{
+.profiles-info h3{
     font-size: 1.3rem;
     color: rgb(51,51,51);
     border-bottom: 1px solid rgb(240,240,240);
@@ -51,7 +51,7 @@ border: 3px solid rgb(255,255,255);
     display: flex;
     flex-wrap: wrap;
 }
-.profile-info p{
+.profiles-info p{
     font-size: 0.9rem;
     display: flex;
     align-items: center;
