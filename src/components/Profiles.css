@@ -2,54 +2,67 @@
     margin: 0;
     padding: 0;
 }
-.other-users .profile-card{
-    width: 250px; 
-    height: 322px;
-    margin-top: 10px;
+.profile-card{
+    width: 300px; 
+    height: 330px;
+    margin: 10px 0px;
+    background-color: rgb(255,255,255);
+    border-radius:10px ;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;  
 }
 .users-cards{
     display: flex;
     width: 70%;
     height: 100%;
 }
-.other-users .profile-header{
+.profile-header{
     padding: 5px;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
 }
-.other-users .profile-avatar{
-width: 50px;
-height: 50px;
-margin-bottom: 0px;
+.profile-avatar{
+width: 100px;
+height: 100px;
+border-radius: 50%;
+border: 3px solid rgb(255,255,255);
 }
-.other-users .profile-name{
+.profile-name{
     margin: 0px 0 5px;
     font-size: 1.1rem;
     font-weight: bold;
 }
-.other-users .profile-artistName{
+.profile-artistName{
     font-size: 0.9rem;
 }
-.other-users .profile-info{
-    margin-bottom: 15px;
+.profile-info{
+    margin-bottom: 10px;
     word-break: break-all;
 }
-.other-users .profile-body{
+.profile-body{
     padding: 10px;
 }
-.other-users .profile-info h3{
-    margin-bottom: 5px;
+.profile-info h3{
     font-size: 1.3rem;
+    color: rgb(51,51,51);
+    border-bottom: 1px solid rgb(240,240,240);
+    padding-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
-.other-users .profile-info p{
-    margin: 5px 0;
+.profile-info p{
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 20px;
 }
-.other-users .your-song p{
+.your-song h3{
+    color: rgb(51,51,51)
+}
+.your-song p{
 margin-top: 5px;
 font-size: 0.8rem;
-}
-.other-users .profile-buttons{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: rgb(249,249,249);
+color: rgb(85,85,85);
 }

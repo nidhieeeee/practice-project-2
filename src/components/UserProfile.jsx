@@ -1,44 +1,50 @@
-import React from "react";
-import Profiles from "./Profiles.jsx";
+import React, { useEffect } from "react";
+import { Mail , Phone , MapPin , University ,  BookOpen , Calendar} from 'lucide-react';
 import "./UserProfile.css";
-function UserProfile(){
-    return(
-        <div className="body">
+import { useNavigate } from "react-router-dom";
+function UserProfile({data}) {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!data) {
+            navigate("/userform");
+        }
+    }, []);
+
+    return (
         <div className="profileContainer">
-            <div className="profile-card">
-                <div className="profile-header">
-                    <img src="https://thumbs.dreamstime.com/b/d-icon-avatar-cartoon-cute-freelancer-woman-working-online-learning-laptop-transparent-png-background-works-embodying-345422695.jpg" alt="Avatar" className="profile-avatar" />
-                    <h2 className="profile-name">Nidhi Mehta</h2>
-                    <p className="profile-artistName">Noah</p>
-                </div>
-                <div className="profile-body">
-                    <div className="profile-info">
-                        <h3>Contact Information</h3>
-                        <p>Email: nidhimehta0303@gmail.com</p>
-                    </div>
-                    <div className="your-song">
-                        <h3>My Thoughts</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic similique ex deserunt eum rerum quisquam, incidunt atque minus fuga sed officiis illo mollitia dolores architecto ipsam laboriosam numquam dolorum adipisci.</p>
-                    </div>
-                </div>
-                <div className="profile-buttons">
-                    <button className="edit">Edit Profile</button>
-                    <button className="logout">Logout</button>
-                </div>
+            <div className="pfp">
+                <img src={
+                    data?.gender =="female" ? "https://www.pngall.com/wp-content/uploads/5/Cat-Anime-Girl-PNG-Free-Download.png" : "https://static.vecteezy.com/system/resources/previews/035/916/326/non_2x/ai-generated-male-anime-characters-transparent-background-free-png.png" 
+                } alt="pfp" />
             </div>
-            </div>
-<div className="Users-cards">
-    <div className="Users-cards-top">
-    <Profiles />
-    <Profiles />
-    <Profiles />
-    <Profiles />
-    </div>
-    <div className="Users-cards-bottom">
-    <Profiles /><Profiles /><Profiles /><Profiles />
-    </div>
+
+<div className="name-bio">
+<h3>Personal Information</h3>
+                    <p>{data?.name}</p>
+                    <p>{data?.bio}</p>
 </div>
-       
+
+            <div className="contact-education">
+                <div className="contact">
+                    <h3>Contact Information</h3>
+                    <div className="flex"><Mail />
+                    <p> {data?.email}</p></div>
+                    <div className="flex"> <Phone /><p>{data?.phone}</p></div>
+                    
+                    <div className="flex"><MapPin />
+                    <p>{data?.location}</p></div>
+                </div>
+                <div className="education">
+                    <h3>Education</h3>
+                    <div className="flex"><University /><p>{data?.university}</p></div>
+                    <div className="flex">< BookOpen /><p>{data?.course}</p>
+                    </div>
+                    <div className="flex"><Calendar /><p>{data?.year}</p></div>
+                    
+                    
+                </div>
+            </div>
         </div>
     );
 }

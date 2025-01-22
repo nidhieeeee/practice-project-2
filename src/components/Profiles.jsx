@@ -1,5 +1,6 @@
-import React from "react"
-import "./Profiles.css"
+import React from "react";
+import { Mail } from 'lucide-react';
+import "./Profiles.css";
 function Profiles(){
     return(
         <div className="other-users"> 
@@ -7,16 +8,17 @@ function Profiles(){
                 <div className="profile-header">
                     <img src="https://thumbs.dreamstime.com/b/d-icon-avatar-cartoon-cute-freelancer-woman-working-online-learning-laptop-transparent-png-background-works-embodying-345422695.jpg" alt="Avatar" className="profile-avatar" />
                     <h2 className="profile-name">Nidhi Mehta</h2>
-                    <p className="profile-artistName">Noah</p>
+                    <p className="profile-artistName">Front-End Developer</p>
                 </div>
                 <div className="profile-body">
                     <div className="profile-info">
                         <h3>Contact Information</h3>
-                        <p>Email: nidhimehta0303@gmail.com</p>
+                        <p> <Mail height="20px"  /> <span>nidhimehta0303@gmail.com</span></p>
+                        
                     </div>
                     <div className="your-song">
-                        <h3>My Thoughts</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic similique ex deserunt eum rerum quisquam, incidunt atque minus fuga sed officiis illo mollitia dolores architecto ipsam laboriosam numquam dolorum adipisci.</p>
+                        <h3>About Me</h3>
+                        <p>I’m a passionate developer with expertise in Front-End. I specialize in creating user-friendly interfaces, scalable systems and innovative solutions that solve real-world problems.</p>
                     </div>
                 </div>
             </div>

@@ -1,54 +1,86 @@
-*{
-    margin:0;
-    padding:0
+* {
+  margin: 0;
+  padding: 0
 }
-.formContainer{
-    display:flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    margin-top:20px;
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #e7e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-form{
-    width: 800px;
-    padding: 20px;
-    background-color: rgb(235, 235, 252);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+
+.container h1 {
+  text-align: center;
+  color: #333;
 }
- form div{
-    margin-bottom: 20px;
+
+form {
+  display: flex;
+  flex-direction: column;
 }
-label{
-    display:block;
-    font-weight: bold;
-    margin: 10px 0px;
-    font-size: large;
+
+.container label {
+  margin-bottom: 15px;
+  color: #555;
 }
-input , textarea{
-    width: 700px;
-    padding: 12px;
-    border:2px solid white;
-    border-radius: 5px;
-    font-size: 1.2rem;
+
+.container input, .container select, .container textarea, .container button {
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
 }
-textarea{
-    min-height: 100px;
-    resize: vertical;
+
+.container button {
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
 }
- .formContainer button{
-    width:92%;
+
+.container button:hover {
+  background-color: rgb(73, 73, 250);
+  transform: scale(1);
+}
+
+.container textarea {
+  resize: vertical;
+}
+
+.container input:focus, .container select:focus, .container textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+.radio-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+}
+.radio-group input{
+  padding: 0;
+  font-size: 0;
+
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
     padding: 15px;
-    color:  black;
-    font-size: 1.2rem;
-    background-color: rgb(153, 153, 250);
-    border-radius: 5px;
-    cursor:pointer;
-    transition:  background-color 0.3s ease;
-    transform: none;
-}
-.formContainer button:hover{
-    background-color: rgb(47, 71, 180);
-    color: white;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .container input, .container select, .container textarea, .container button {
+    font-size: 14px;
+  }
 }

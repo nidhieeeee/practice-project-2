@@ -12,3 +12,17 @@
     background-color: #2C3E50;
     color:#ECF0F1;
 }
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        height: auto;
+        gap: 5px;
+        padding: 10px 0;
+    }
+}
+@media (max-width: 480px) {
+    .footer p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}

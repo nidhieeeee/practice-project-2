@@ -1,28 +1,34 @@
-import React from "react";
+import React , { useState} from "react";
 import { Guitar } from 'lucide-react';
 import { Link } from "react-router-dom"
 import './Navbar.css';
 function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
     return (
         <div className="navbar">
-            <div className="logo"><Guitar height="35px" width="35px" color="#ECF0F1" />
-                <p>FillFast</p>
+            <div className="logo"><Guitar height="35px" width="35px" color="black" />
+                <p>Nidhi Academy</p>
             </div>
+            <button className="burger-menu" onClick={toggleMenu}>
+                ☰
+            </button>
+            <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
+                <li>
 
-            <ul>
-                <li>
-                    {/* <Link to="/home"> Home</Link> */}
-                    Home
+                    HOME
 
                 </li>
                 <li>
-                    {/* <Link to="/form">Form</Link> */}
-                    Form
+                    ABOUT
                 </li>
                 <li>
-                    {/* <Link to="/user">User Profile</Link> */}
-                    Profile
+                   TEAM
                 </li>
+                <li>REVIEWS</li>
             </ul>
 
             <div className="buttons">
