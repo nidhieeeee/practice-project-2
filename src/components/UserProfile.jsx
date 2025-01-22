@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { Mail , Phone , MapPin , University ,  BookOpen , Calendar} from 'lucide-react';
+import { Mail, Phone, MapPin, University, BookOpen, Calendar } from 'lucide-react';
 import "./UserProfile.css";
 import { useNavigate } from "react-router-dom";
-function UserProfile({data}) {
+
+function UserProfile({ data }) {
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -12,40 +13,60 @@ function UserProfile({data}) {
     }, []);
 
     return (
-        <div className="profileContainer">
-            <div className="pfp">
-                <img src={
-                    data?.gender =="female" ? "https://www.pngall.com/wp-content/uploads/5/Cat-Anime-Girl-PNG-Free-Download.png" : "https://static.vecteezy.com/system/resources/previews/035/916/326/non_2x/ai-generated-male-anime-characters-transparent-background-free-png.png" 
-                } alt="pfp" />
-            </div>
-
-<div className="name-bio">
-<h3>Personal Information</h3>
-                    <p>{data?.name}</p>
-                    <p>{data?.bio}</p>
-</div>
-
-            <div className="contact-education">
-                <div className="contact">
-                    <h3>Contact Information</h3>
-                    <div className="flex"><Mail />
-                    <p> {data?.email}</p></div>
-                    <div className="flex"> <Phone /><p>{data?.phone}</p></div>
-                    
-                    <div className="flex"><MapPin />
-                    <p>{data?.location}</p></div>
-                </div>
-                <div className="education">
-                    <h3>Education</h3>
-                    <div className="flex"><University /><p>{data?.university}</p></div>
-                    <div className="flex">< BookOpen /><p>{data?.course}</p>
+        <div className="profile-container">
+            <div className="profile-card">
+                <div className="profile-header">
+                    <img
+                        src={
+                            data?.gender === "female"
+                                ? "https://png.pngtree.com/png-clipart/20231210/original/pngtree-business-woman-avatar-image-png-image_13810303.png"
+                                : "https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001877.png"
+                        }
+                        alt="Profile"
+                        className="profile-image"
+                    />
+                    <div className="profile-name-bio">
+                        <h2>{data?.name || "User Name"}</h2>
+                        <p>{data?.bio || "A short bio about the user."}</p>
                     </div>
-                    <div className="flex"><Calendar /><p>{data?.year}</p></div>
-                    
-                    
+                </div>
+
+                <div className="profile-details">
+                    <div className="details-section">
+                        <h3>Contact Information</h3>
+                        <div className="detail-item">
+                            <Mail />
+                            <p>{data?.email || "example@example.com"}</p>
+                        </div>
+                        <div className="detail-item">
+                            <Phone />
+                            <p>{data?.phone || "+123 456 7890"}</p>
+                        </div>
+                        <div className="detail-item">
+                            <MapPin />
+                            <p>{data?.location || "Location not provided"}</p>
+                        </div>
+                    </div>
+
+                    <div className="details-section">
+                        <h3>Education</h3>
+                        <div className="detail-item">
+                            <University />
+                            <p>{data?.university || "University Name"}</p>
+                        </div>
+                        <div className="detail-item">
+                            <BookOpen />
+                            <p>{data?.course || "Course Name"}</p>
+                        </div>
+                        <div className="detail-item">
+                            <Calendar />
+                            <p>{data?.year } Year of Graduation </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     );
 }
+
 export default UserProfile;
