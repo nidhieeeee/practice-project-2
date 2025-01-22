@@ -23,7 +23,7 @@ body {
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .profile-header {
     display: flex;
@@ -92,6 +92,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .profile-card{
+        height: auto;
+    }
     .profile-details {
         flex-direction: column;
     }
